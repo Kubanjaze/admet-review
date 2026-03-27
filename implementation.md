@@ -39,4 +39,9 @@ Outputs: admet_review.json, admet_report.txt
 | Output tokens | 466 |
 | Est. cost | $0.0023 |
 
+## Risks (resolved)
+- Claude may hallucinate property values — mitigated by computing properties locally with RDKit, only sending computed values
+- Generic "all low risk" responses — not observed; Claude correctly flagged Br-specific metabolic concerns
+- Risk level thresholds may be inconsistent across calls — mitigated by explicit system prompt
+
 Key finding: Claude correctly identified benz_003_Br as medium risk due to bromine-specific metabolic/bioaccumulation concerns — a nuanced medchem flag beyond simple RO5 violations.
